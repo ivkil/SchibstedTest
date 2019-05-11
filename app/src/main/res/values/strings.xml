@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Schibsted Test</string>
+
+    <string name="title_usd_to_eur">Today 1 United States Dollar equals</string>
+    <string name="eur_rate" translatable="false">%.2f Euro</string>
+
+    <string name="loading">Loading data …</string>
+    <string name="generic_error">Unfortunately, something get wrong</string>
+</resources>
