@@ -12,5 +12,6 @@ abstract class UnitTest {
 
     @Suppress("LeakingThis")
     @Rule
-    @JvmField val injectMocks = InjectMocksRule.create(this@UnitTest)
+    @JvmField
+    val injectMocks = InjectMocksRule.create(this@UnitTest)
 }

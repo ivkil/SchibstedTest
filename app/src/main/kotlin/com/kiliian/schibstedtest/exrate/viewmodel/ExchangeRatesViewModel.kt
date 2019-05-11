@@ -3,7 +3,7 @@ package com.kiliian.schibstedtest.exrate.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.Entry
 import com.kiliian.schibstedtest.domain.exception.Failure
 import com.kiliian.schibstedtest.domain.exrate.interactor.ExchangeRatesInteractor
 import com.kiliian.schibstedtest.domain.exrate.model.ExchangeRate
@@ -18,15 +18,9 @@ class ExchangeRatesViewModel @Inject constructor(
     private val mapper: ExchangeRateModelMapper
 ) : ViewModel() {
 
-    val todayRate: MutableLiveData<Float> by lazy {
-        MutableLiveData<Float>()
-    }
-    val rates: MutableLiveData<LineDataSet> by lazy {
-        MutableLiveData<LineDataSet>()
-    }
-    val failure: MutableLiveData<Failure> by lazy {
-        MutableLiveData<Failure>()
-    }
+    val todayRate = MutableLiveData<Float>()
+    val rates = MutableLiveData<List<Entry>>()
+    val failure = MutableLiveData<Failure>()
 
     init {
         viewModelScope.launch {
