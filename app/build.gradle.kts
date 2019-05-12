@@ -13,6 +13,8 @@ android {
 
         minSdkVersion(21)
         targetSdkVersion(28)
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -26,6 +28,7 @@ android {
     sourceSets {
         getByName("main").java.srcDirs("src/main/kotlin")
         getByName("test").java.srcDirs("src/test/kotlin")
+        getByName("androidTest").java.srcDirs("src/androidTest/kotlin")
     }
 
     compileOptions {
@@ -67,7 +70,11 @@ dependencies {
     testImplementation(TestLibs.mockito)
     testImplementation(TestLibs.robolectric)
 
-    testImplementation ("org.threeten:threetenbp:1.4.0"){
+    androidTestImplementation(TestLibs.runner)
+    androidTestImplementation(TestLibs.rules)
+    androidTestImplementation(TestLibs.espresso)
+
+    testImplementation("org.threeten:threetenbp:1.4.0") {
         exclude("com.jakewharton.threetenabp", "threetenabp")
     }
 

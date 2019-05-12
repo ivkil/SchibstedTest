@@ -75,10 +75,17 @@ object TestLibs {
         const val jUnit = "4.12"
         const val mockito = "1.5.0"
         const val robolectric = "4.2.1"
+
+        const val test = "1.1.0"
+        const val espresso = "3.1.0"
     }
 
     const val jUnit = "junit:junit:${Versions.jUnit}"
     const val kotlinTest = "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
     const val mockito = "com.nhaarman:mockito-kotlin:${Versions.mockito}"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
+
+    const val runner = "androidx.test:runner:${Versions.test}"
+    const val rules = "androidx.test:rules:${Versions.test}"
+    const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 }
