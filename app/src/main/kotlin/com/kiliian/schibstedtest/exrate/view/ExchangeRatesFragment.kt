@@ -99,7 +99,6 @@ class ExchangeRatesFragment : DaggerFragment() {
         val data = LineDataSet(entries, null).apply {
             // Setup line
             mode = LineDataSet.Mode.HORIZONTAL_BEZIER
-            cubicIntensity
             color = ContextCompat.getColor(context!!, R.color.colorPrimary)
             lineWidth = 3f
 

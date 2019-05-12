@@ -10,8 +10,6 @@ dependencies {
     implementation(Libs.retrofitMoshiConverter)
 
     implementation(Libs.okHttp)
-    implementation(Libs.okHttpLoggingInterceptor)
-
     implementation(Libs.moshi)
     implementation(Libs.okio)
 

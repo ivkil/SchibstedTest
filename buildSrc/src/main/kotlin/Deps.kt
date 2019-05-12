@@ -60,8 +60,6 @@ object Libs {
     const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
 
     const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
-    const val okHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
-
     const val okio = "com.squareup.okio:okio:${Versions.okio}"
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
 

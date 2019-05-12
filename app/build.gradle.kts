@@ -59,7 +59,7 @@ dependencies {
 
     implementation(Libs.retrofit)
     implementation(Libs.okHttp)
-    implementation(Libs.okHttpLoggingInterceptor)
+    implementation(Libs.okio)
     implementation(Libs.moshi)
 
     implementation(Libs.threeTenAbp)
