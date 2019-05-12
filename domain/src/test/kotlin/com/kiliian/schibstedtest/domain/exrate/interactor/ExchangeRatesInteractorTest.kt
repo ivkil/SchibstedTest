@@ -33,7 +33,7 @@ class ExchangeRatesInteractorTest : UnitTest() {
 
         assertEquals(result, interactor.getUsdToEurLastMonth())
         verify(repository).getRates(
-            "USD",
+            eq("USD"),
             check {
                 assertEquals(1, it.size)
                 assertEquals("EUR", it.first())

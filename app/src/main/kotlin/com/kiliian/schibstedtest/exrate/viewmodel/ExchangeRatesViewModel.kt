@@ -34,10 +34,11 @@ class ExchangeRatesViewModel @Inject constructor(
     }
 
     private fun handleRates(data: Set<ExchangeRate>) {
-        // As set contains sorted values by date asc, last one corresponds for today
-        val todayRates = data.last().rates
-        todayRate.postValue(todayRates.values.first())
-
+        if (!data.isEmpty()) {
+            // As set contains sorted values by date asc, last one corresponds for today
+            val todayRates = data.last().rates
+            todayRate.postValue(todayRates.values.first())
+        }
         rates.postValue(mapper.map(data))
     }
 }
